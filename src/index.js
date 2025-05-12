@@ -618,9 +618,6 @@ class StorageService {
 
 // Export adapters
 export { MemoryAdapter } from './adapters/memory.js';
-export { FilesystemAdapter } from './adapters/filesystem.js';
-export { S3Adapter } from './adapters/s3.js';
-export { SupabaseAdapter } from './adapters/supabase.js';
 
 // Export utilities
 export { createMetadataManager } from './utils/metadata.js';
