@@ -17,6 +17,7 @@
     "test": "vitest run --bail 1",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "prepare": "husky",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

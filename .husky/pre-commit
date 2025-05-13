@@ -1,1 +1,1 @@
-cd "$(git rev-parse --show-toplevel)" && pnpm test
+pnpm test
