@@ -1,28 +1,18 @@
 /**
- * Basic tests for @profullstack/storage-service
+ * Test entry point for @profullstack/storage-service
+ * 
+ * This file imports all test files to ensure they are included in the test run.
  */
 
-import { expect } from 'chai';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// Main service tests
+import './storage-service.test.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Adapter tests
+import './adapters/memory.test.js';
 
-describe('@profullstack/storage-service', function() {
-  it('should have a package.json file', function() {
-    const pkgPath = path.join(__dirname, '../package.json');
-    expect(fs.existsSync(pkgPath)).to.be.true;
-    
-    const pkgContent = fs.readFileSync(pkgPath, 'utf8');
-    const pkg = JSON.parse(pkgContent);
-    expect(pkg).to.be.an('object');
-    expect(pkg.name).to.equal('@profullstack/storage-service');
-  });
-  
-  it('should have a src directory', function() {
-    const srcDir = path.join(__dirname, '../src');
-    expect(fs.existsSync(srcDir)).to.be.true;
-  });
-});
+// Utility tests
+import './utils/metadata.test.js';
+import './utils/path.test.js';
+import './utils/content-type.test.js';
+
+// This file is used as the entry point for the test command in package.json
