@@ -1,6 +1,6 @@
 {
   "name": "@profullstack/storage-service",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Flexible storage service abstraction for file storage, retrieval, and metadata management",
   "type": "module",
   "main": "dist/index.js",
